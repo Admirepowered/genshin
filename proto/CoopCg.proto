@@ -1,0 +1,8 @@
+syntax = "proto3";
+option csharp_namespace = "YSFreedom.Common.Protocol";
+
+
+message CoopCg {
+	uint32 id = 1;
+	bool is_unlock = 2;
+}

@@ -1,0 +1,10 @@
+syntax = "proto3";
+option csharp_namespace = "YSFreedom.Common.Protocol";
+
+enum OpActivityType {
+	OP_ACTIVITY_NONE = 0;
+	OP_ACTIVITY_SIGN_IN = 1;
+	OP_ACTIVITY_BONUS = 2;
+	OP_ACTIVITY_TRAVEL_BUSINESS = 3;
+	OP_ACTIVITY_CRUCIBLE = 4;
+}

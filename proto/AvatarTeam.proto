@@ -1,0 +1,8 @@
+syntax = "proto3";
+option csharp_namespace = "YSFreedom.Common.Protocol";
+
+
+message AvatarTeam {
+	repeated uint64 avatar_guid_list = 1;
+	string team_name = 2;
+}

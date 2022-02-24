@@ -1,0 +1,15 @@
+syntax = "proto3";
+option csharp_namespace = "YSFreedom.Common.Protocol";
+
+
+message ReunionBriefInfo {
+	uint32 finish_time = 1;
+	bool is_taken_first_gift = 2;
+	uint32 first_gift_reward_id = 3;
+	uint32 sign_in_config_id = 4;
+	bool sign_in_has_reward = 5;
+	uint32 mission_id = 6;
+	bool mission_has_reward = 7;
+	uint32 privilege_id = 8;
+	string version = 9;
+}

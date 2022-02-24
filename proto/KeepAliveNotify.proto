@@ -1,0 +1,14 @@
+syntax = "proto3";
+option csharp_namespace = "YSFreedom.Common.Protocol";
+
+
+message KeepAliveNotify {
+	enum CmdId {
+		option allow_alias = true;
+		ENET_CHANNEL_ID = 0;
+		NONE = 0;
+		CMD_ID = 1;
+		ENET_IS_RELIABLE = 1;
+	}
+
+}

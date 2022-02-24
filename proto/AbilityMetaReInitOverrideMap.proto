@@ -1,0 +1,8 @@
+syntax = "proto3";
+option csharp_namespace = "YSFreedom.Common.Protocol";
+
+import "AbilityScalarValueEntry.proto";
+
+message AbilityMetaReInitOverrideMap {
+	repeated AbilityScalarValueEntry override_map = 1;
+}

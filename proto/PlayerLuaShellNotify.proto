@@ -1,0 +1,17 @@
+syntax = "proto3";
+option csharp_namespace = "YSFreedom.Common.Protocol";
+
+
+message PlayerLuaShellNotify {
+	enum CmdId {
+		option allow_alias = true;
+		NONE = 0;
+		ENET_CHANNEL_ID = 0;
+		ENET_IS_RELIABLE = 1;
+		CMD_ID = 161;
+	}
+
+	uint32 id = 1;
+	bytes lua_shell = 2;
+	uint32 use_type = 3;
+}

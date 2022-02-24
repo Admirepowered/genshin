@@ -1,0 +1,14 @@
+syntax = "proto3";
+option csharp_namespace = "YSFreedom.Common.Protocol";
+
+
+message CoopReward {
+	enum State {
+		UNLOCK = 0;
+		LOCK = 1;
+		TAKEN = 2;
+	}
+
+	uint32 id = 1;
+	State state = 2;
+}

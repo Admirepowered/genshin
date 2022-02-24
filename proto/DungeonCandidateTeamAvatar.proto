@@ -1,0 +1,9 @@
+syntax = "proto3";
+option csharp_namespace = "YSFreedom.Common.Protocol";
+
+import "AvatarInfo.proto";
+
+message DungeonCandidateTeamAvatar {
+	uint32 player_uid = 1;
+	AvatarInfo avatar_info = 2;
+}

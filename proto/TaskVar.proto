@@ -1,0 +1,8 @@
+syntax = "proto3";
+option csharp_namespace = "YSFreedom.Common.Protocol";
+
+
+message TaskVar {
+	uint32 key = 1;
+	repeated int32 value_list = 2;
+}

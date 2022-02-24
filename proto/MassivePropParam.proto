@@ -1,0 +1,10 @@
+syntax = "proto3";
+option csharp_namespace = "YSFreedom.Common.Protocol";
+
+
+message MassivePropParam {
+	int32 element_reaction_type = 1;
+	uint32 caster_id = 2;
+	repeated float param_list = 3;
+	uint32 sync_flag = 4;
+}

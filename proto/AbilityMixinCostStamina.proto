@@ -1,0 +1,7 @@
+syntax = "proto3";
+option csharp_namespace = "YSFreedom.Common.Protocol";
+
+
+message AbilityMixinCostStamina {
+	bool is_swim = 1;
+}

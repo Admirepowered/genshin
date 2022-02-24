@@ -1,0 +1,9 @@
+syntax = "proto3";
+option csharp_namespace = "YSFreedom.Common.Protocol";
+
+import "Vector.proto";
+
+message WeekendDjinnInfo {
+	Vector pos = 1;
+	Vector rot = 2;
+}

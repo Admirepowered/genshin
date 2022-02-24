@@ -1,0 +1,16 @@
+syntax = "proto3";
+option csharp_namespace = "YSFreedom.Common.Protocol";
+
+import "CoopChapter.proto";
+
+message CoopChapterUpdateNotify {
+	enum CmdId {
+		option allow_alias = true;
+		NONE = 0;
+		ENET_CHANNEL_ID = 0;
+		ENET_IS_RELIABLE = 1;
+		CMD_ID = 1958;
+	}
+
+	repeated CoopChapter chapter_list = 1;
+}

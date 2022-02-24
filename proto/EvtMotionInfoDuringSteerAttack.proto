@@ -1,0 +1,11 @@
+syntax = "proto3";
+option csharp_namespace = "YSFreedom.Common.Protocol";
+
+import "Vector.proto";
+
+message EvtMotionInfoDuringSteerAttack {
+	uint32 entity_id = 1;
+	Vector velocity = 2;
+	Vector face_dir = 3;
+	Vector pos = 4;
+}

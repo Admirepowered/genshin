@@ -1,0 +1,8 @@
+syntax = "proto3";
+option csharp_namespace = "YSFreedom.Common.Protocol";
+
+
+message ChannellerSlabBuffSchemeInfo {
+	map<uint32, uint32> slot_map = 1;
+	uint32 total_energy = 2;
+}

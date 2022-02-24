@@ -1,0 +1,10 @@
+syntax = "proto3";
+option csharp_namespace = "YSFreedom.Common.Protocol";
+
+
+message AbilityMetaElementReactionVisual {
+	uint32 element_reaction_type = 1;
+	uint32 element_source_type = 2;
+	uint32 element_reactor_type = 3;
+	int32 hit_index = 4;
+}

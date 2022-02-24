@@ -1,0 +1,9 @@
+syntax = "proto3";
+option csharp_namespace = "YSFreedom.Common.Protocol";
+
+
+message CityInfo {
+	uint32 city_id = 1;
+	uint32 level = 2;
+	uint32 crystal_num = 3;
+}

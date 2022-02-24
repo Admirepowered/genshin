@@ -1,0 +1,8 @@
+syntax = "proto3";
+option csharp_namespace = "YSFreedom.Common.Protocol";
+
+
+message QueryFilter {
+	int32 type_id = 1;
+	int32 area_mask = 2;
+}

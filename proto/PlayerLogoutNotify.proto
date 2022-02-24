@@ -1,0 +1,12 @@
+syntax = "proto3";
+option csharp_namespace = "YSFreedom.Common.Protocol";
+
+
+message PlayerLogoutNotify {
+	enum CmdId {
+		NONE = 0;
+		CMD_ID = 107;
+	}
+
+	int32 retcode = 1;
+}

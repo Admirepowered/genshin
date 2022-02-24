@@ -1,0 +1,10 @@
+syntax = "proto3";
+option csharp_namespace = "YSFreedom.Common.Protocol";
+
+import "Vector.proto";
+import "PBNavMeshPoly.proto";
+
+message PBNavMeshTile {
+	repeated Vector vecs = 1;
+	repeated PBNavMeshPoly polys = 2;
+}

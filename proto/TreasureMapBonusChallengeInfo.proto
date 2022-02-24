@@ -1,0 +1,9 @@
+syntax = "proto3";
+option csharp_namespace = "YSFreedom.Common.Protocol";
+
+
+message TreasureMapBonusChallengeInfo {
+	uint32 config_id = 1;
+	bool is_active = 2;
+	bool is_done = 3;
+}

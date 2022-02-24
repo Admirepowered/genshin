@@ -1,0 +1,9 @@
+syntax = "proto3";
+option csharp_namespace = "YSFreedom.Common.Protocol";
+
+
+message DeliveryActivityDetailInfo {
+	uint32 day_index = 1;
+	repeated uint32 finished_delivery_quest_index = 2;
+	bool is_taken_reward = 3;
+}

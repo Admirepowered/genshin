@@ -1,0 +1,9 @@
+syntax = "proto3";
+option csharp_namespace = "YSFreedom.Common.Protocol";
+
+
+message PlayerOfferingData {
+	uint32 offering_id = 1;
+	uint32 level = 2;
+	repeated uint32 taken_level_reward_list = 3;
+}

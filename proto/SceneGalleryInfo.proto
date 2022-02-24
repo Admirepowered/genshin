@@ -1,0 +1,25 @@
+syntax = "proto3";
+option csharp_namespace = "YSFreedom.Common.Protocol";
+
+import "SceneGalleryBalloonInfo.proto";
+import "SceneGalleryFallInfo.proto";
+import "SceneGalleryFlowerInfo.proto";
+import "SceneGalleryBulletInfo.proto";
+import "SceneGalleryBrokenFloorInfo.proto";
+import "SceneGalleryHideAndSeekInfo.proto";
+import "GalleryStageType.proto";
+
+message SceneGalleryInfo {
+	oneof Info {
+		SceneGalleryBalloonInfo balloon_info = 10;
+		SceneGalleryFallInfo fall_info = 11;
+		SceneGalleryFlowerInfo flower_info = 12;
+		SceneGalleryBulletInfo bullet_info = 13;
+		SceneGalleryBrokenFloorInfo broken_floor_info = 14;
+		SceneGalleryHideAndSeekInfo hide_and_seek_info = 15;
+	}
+	uint32 gallery_id = 1;
+	uint32 end_time = 2;
+	GalleryStageType stage = 3;
+	uint32 pre_start_end_time = 4;
+}

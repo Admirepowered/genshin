@@ -1,0 +1,8 @@
+syntax = "proto3";
+option csharp_namespace = "YSFreedom.Common.Protocol";
+
+import "AnimatorParameterValueInfoPair.proto";
+
+message AbilityMetaSetPoseParameter {
+	AnimatorParameterValueInfoPair value = 1;
+}

@@ -1,0 +1,9 @@
+syntax = "proto3";
+option csharp_namespace = "YSFreedom.Common.Protocol";
+
+enum ExpeditionState {
+	EXPEDITION_NONE = 0;
+	EXPEDITION_STARTED = 1;
+	EXPEDITION_FINISHED = 2;
+	EXPEDITION_REWARDED = 3;
+}

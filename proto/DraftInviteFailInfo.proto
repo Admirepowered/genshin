@@ -1,0 +1,9 @@
+syntax = "proto3";
+option csharp_namespace = "YSFreedom.Common.Protocol";
+
+import "DraftInviteFailReason.proto";
+
+message DraftInviteFailInfo {
+	uint32 uid = 1;
+	DraftInviteFailReason reason = 2;
+}

@@ -1,0 +1,9 @@
+syntax = "proto3";
+option csharp_namespace = "YSFreedom.Common.Protocol";
+
+import "Vector.proto";
+
+message ShapeSphere {
+	Vector center = 1;
+	float radius = 2;
+}

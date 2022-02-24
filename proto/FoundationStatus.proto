@@ -1,0 +1,9 @@
+syntax = "proto3";
+option csharp_namespace = "YSFreedom.Common.Protocol";
+
+enum FoundationStatus {
+	NONE = 0;
+	INIT = 1;
+	BUILDING = 2;
+	BUILT = 3;
+}

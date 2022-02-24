@@ -1,0 +1,16 @@
+syntax = "proto3";
+option csharp_namespace = "YSFreedom.Common.Protocol";
+
+import "ShopGoods.proto";
+import "ShopMcoinProduct.proto";
+import "ShopCardProduct.proto";
+
+message Shop {
+	uint32 shop_type = 1;
+	repeated ShopGoods goods_list = 2;
+	repeated ShopMcoinProduct mcoin_product_list = 3;
+	repeated ShopCardProduct card_product_list = 4;
+	uint32 next_refresh_time = 6;
+	uint32 city_id = 7;
+	uint32 city_reputation_level = 8;
+}

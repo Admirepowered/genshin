@@ -1,0 +1,7 @@
+syntax = "proto3";
+option csharp_namespace = "YSFreedom.Common.Protocol";
+
+enum TransmitReason {
+	TRANSMIT_NONE = 0;
+	TRANSMIT_QUEST = 1;
+}

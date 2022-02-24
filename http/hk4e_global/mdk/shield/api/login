@@ -1,0 +1,34 @@
+{
+    "retcode": 0,
+    "message": "OK",
+    "data": {
+        "account": {
+            "uid": "119909542",
+            "name": "",
+            "email": "xxxxx@xxx.com",
+            "mobile": "00000",
+            "is_email_verify": "0",
+            "realname": "**英",
+            "identity_card": "320************888",
+            "token": "g6XuUSa9g4vlQ1JbYiKClpHMPdCJ35hX",
+            "safe_mobile": "170****0969",
+            "facebook_name": "",
+            "google_name": "",
+            "twitter_name": "",
+            "game_center_name": "",
+            "apple_name": "",
+            "sony_name": "",
+            "tap_name": "",
+            "country": "",
+            "reactivate_ticket": "",
+            "area_code": "",
+            "device_grant_ticket": "",
+            "steam_name": ""
+        },
+        "device_grant_required": false,
+        "safe_moblie_required": false,
+        "realperson_required": false,
+        "reactivate_required": false,
+        "realname_operation": "None"
+    }
+}

@@ -1,0 +1,7 @@
+syntax = "proto3";
+option csharp_namespace = "YSFreedom.Common.Protocol";
+
+
+message PlayerUidExtInfo {
+	uint32 reg_platform = 1;
+}

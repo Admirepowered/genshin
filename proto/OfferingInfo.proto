@@ -1,0 +1,7 @@
+syntax = "proto3";
+option csharp_namespace = "YSFreedom.Common.Protocol";
+
+
+message OfferingInfo {
+	uint32 offering_id = 1;
+}

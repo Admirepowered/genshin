@@ -1,0 +1,9 @@
+syntax = "proto3";
+option csharp_namespace = "YSFreedom.Common.Protocol";
+
+import "AnimatorParameterValueInfo.proto";
+
+message AnimatorParameterValueInfoPair {
+	int32 name_id = 1;
+	AnimatorParameterValueInfo animator_para = 2;
+}

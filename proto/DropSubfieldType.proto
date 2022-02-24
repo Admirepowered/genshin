@@ -1,0 +1,7 @@
+syntax = "proto3";
+option csharp_namespace = "YSFreedom.Common.Protocol";
+
+enum DropSubfieldType {
+	DROP_SUBFIELD_NONE = 0;
+	DROP_SUBFIELD_ONE = 1;
+}

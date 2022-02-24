@@ -1,0 +1,9 @@
+syntax = "proto3";
+option csharp_namespace = "YSFreedom.Common.Protocol";
+
+import "BattlePassRewardTag.proto";
+
+message BattlePassRewardTakeOption {
+	BattlePassRewardTag tag = 1;
+	uint32 option_idx = 2;
+}

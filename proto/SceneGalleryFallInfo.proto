@@ -1,0 +1,9 @@
+syntax = "proto3";
+option csharp_namespace = "YSFreedom.Common.Protocol";
+
+import "FallPlayerInfo.proto";
+
+message SceneGalleryFallInfo {
+	map<uint32, FallPlayerInfo> scene_player_fall_info_map = 1;
+	uint32 end_time = 2;
+}

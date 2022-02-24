@@ -1,0 +1,7 @@
+syntax = "proto3";
+option csharp_namespace = "YSFreedom.Common.Protocol";
+
+enum ModifierAction {
+	ADDED = 0;
+	REMOVED = 1;
+}

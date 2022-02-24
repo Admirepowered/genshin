@@ -1,0 +1,8 @@
+syntax = "proto3";
+option csharp_namespace = "YSFreedom.Common.Protocol";
+
+import "FleurFairMusicRecord.proto";
+
+message FleurFairMusicGameInfo {
+	map<uint32, FleurFairMusicRecord> music_record_map = 1;
+}

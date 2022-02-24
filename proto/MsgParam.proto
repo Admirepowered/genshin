@@ -1,0 +1,11 @@
+syntax = "proto3";
+option csharp_namespace = "YSFreedom.Common.Protocol";
+
+
+message MsgParam {
+	oneof Param {
+		uint32 int_param = 1;
+		float flt_param = 2;
+		string str_param = 3;
+	}
+}

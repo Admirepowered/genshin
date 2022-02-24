@@ -1,0 +1,18 @@
+syntax = "proto3";
+option csharp_namespace = "YSFreedom.Common.Protocol";
+
+import "EquipParam.proto";
+
+message GetMailItemRsp {
+	enum CmdId {
+		option allow_alias = true;
+		NONE = 0;
+		ENET_CHANNEL_ID = 0;
+		ENET_IS_RELIABLE = 1;
+		CMD_ID = 1405;
+	}
+
+	int32 retcode = 1;
+	repeated uint32 mail_id_list = 2;
+	repeated EquipParam item_list = 3;
+}

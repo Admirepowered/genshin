@@ -1,0 +1,11 @@
+syntax = "proto3";
+option csharp_namespace = "YSFreedom.Common.Protocol";
+
+import "TrialAvatarGrantRecord.proto";
+import "Item.proto";
+
+message TrialAvatarInfo {
+	uint32 trial_avatar_id = 1;
+	repeated Item trial_equip_list = 2;
+	TrialAvatarGrantRecord grant_record = 3;
+}

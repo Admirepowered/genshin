@@ -1,0 +1,7 @@
+syntax = "proto3";
+option csharp_namespace = "YSFreedom.Common.Protocol";
+
+
+message BonusOpActivityInfo {
+	uint32 left_bonus_count = 1;
+}

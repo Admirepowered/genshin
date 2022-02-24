@@ -1,0 +1,9 @@
+syntax = "proto3";
+option csharp_namespace = "YSFreedom.Common.Protocol";
+
+
+message TrialAvatarActivityRewardDetailInfo {
+	uint32 trial_avatar_index_id = 1;
+	bool passed_dungeon = 2;
+	bool received_reward = 3;
+}

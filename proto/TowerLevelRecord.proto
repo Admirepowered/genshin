@@ -1,0 +1,8 @@
+syntax = "proto3";
+option csharp_namespace = "YSFreedom.Common.Protocol";
+
+
+message TowerLevelRecord {
+	uint32 level_id = 1;
+	repeated uint32 satisfied_cond_list = 2;
+}

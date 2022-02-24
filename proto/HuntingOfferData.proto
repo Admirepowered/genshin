@@ -1,0 +1,11 @@
+syntax = "proto3";
+option csharp_namespace = "YSFreedom.Common.Protocol";
+
+import "HuntingPair.proto";
+import "HuntingOfferState.proto";
+
+message HuntingOfferData {
+	HuntingPair hunting_pair = 1;
+	uint32 city_id = 2;
+	HuntingOfferState state = 3;
+}

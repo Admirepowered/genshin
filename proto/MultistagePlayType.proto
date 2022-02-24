@@ -1,0 +1,9 @@
+syntax = "proto3";
+option csharp_namespace = "YSFreedom.Common.Protocol";
+
+enum MultistagePlayType {
+	NON = 0;
+	MECHANICUS = 1;
+	FLEUR_FAIR = 2;
+	HIDE_AND_SEEK = 3;
+}

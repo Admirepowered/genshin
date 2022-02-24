@@ -1,0 +1,10 @@
+syntax = "proto3";
+option csharp_namespace = "YSFreedom.Common.Protocol";
+
+import "AbilityString.proto";
+
+message AbilityMetaAddOrGetAbilityAndTrigger {
+	AbilityString ability_name = 1;
+	AbilityString ability_override = 2;
+	float trigger_argument = 3;
+}

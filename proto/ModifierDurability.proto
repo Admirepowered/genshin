@@ -1,0 +1,8 @@
+syntax = "proto3";
+option csharp_namespace = "YSFreedom.Common.Protocol";
+
+
+message ModifierDurability {
+	float reduce_ratio = 1;
+	float remaining_durability = 2;
+}

@@ -1,0 +1,8 @@
+syntax = "proto3";
+option csharp_namespace = "YSFreedom.Common.Protocol";
+
+import "AbilityEmbryo.proto";
+
+message AbilityControlBlock {
+	repeated AbilityEmbryo ability_embryo_list = 1;
+}

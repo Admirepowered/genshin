@@ -1,0 +1,9 @@
+syntax = "proto3";
+option csharp_namespace = "YSFreedom.Common.Protocol";
+
+enum InBattleMechanicusStageType {
+	IN_BATTLE_MECHANICUS_STAGE_NONE = 0;
+	IN_BATTLE_MECHANICUS_STAGE_BUILD = 1;
+	IN_BATTLE_MECHANICUS_STAGE_CARD_FLIP = 2;
+	IN_BATTLE_MECHANICUS_STAGE_KILL = 3;
+}

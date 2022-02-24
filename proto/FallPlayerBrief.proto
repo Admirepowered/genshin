@@ -1,0 +1,9 @@
+syntax = "proto3";
+option csharp_namespace = "YSFreedom.Common.Protocol";
+
+
+message FallPlayerBrief {
+	uint32 uid = 1;
+	uint32 score = 2;
+	bool is_ground = 3;
+}

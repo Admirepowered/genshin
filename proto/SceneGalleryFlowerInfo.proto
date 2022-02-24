@@ -1,0 +1,9 @@
+syntax = "proto3";
+option csharp_namespace = "YSFreedom.Common.Protocol";
+
+
+message SceneGalleryFlowerInfo {
+	uint32 cur_score = 1;
+	uint32 target_score = 2;
+	uint32 end_time = 3;
+}

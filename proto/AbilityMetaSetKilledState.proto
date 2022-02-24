@@ -1,0 +1,7 @@
+syntax = "proto3";
+option csharp_namespace = "YSFreedom.Common.Protocol";
+
+
+message AbilityMetaSetKilledState {
+	bool killed = 1;
+}

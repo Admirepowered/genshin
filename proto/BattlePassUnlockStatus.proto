@@ -1,0 +1,8 @@
+syntax = "proto3";
+option csharp_namespace = "YSFreedom.Common.Protocol";
+
+enum BattlePassUnlockStatus {
+	BATTLE_PASS_UNLOCK_INVALID = 0;
+	BATTLE_PASS_UNLOCK_FREE = 1;
+	BATTLE_PASS_UNLOCK_PAID = 2;
+}

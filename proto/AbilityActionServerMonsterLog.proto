@@ -1,0 +1,7 @@
+syntax = "proto3";
+option csharp_namespace = "YSFreedom.Common.Protocol";
+
+
+message AbilityActionServerMonsterLog {
+	repeated int32 param_list = 1;
+}

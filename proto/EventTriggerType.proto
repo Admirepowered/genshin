@@ -1,0 +1,7 @@
+syntax = "proto3";
+option csharp_namespace = "YSFreedom.Common.Protocol";
+
+enum EventTriggerType {
+	EVENT_TRIGGER_NONE = 0;
+	EVENT_TRIGGER_ENTER_FORCE = 1;
+}

@@ -1,0 +1,17 @@
+syntax = "proto3";
+option csharp_namespace = "YSFreedom.Common.Protocol";
+
+import "BargainSnapshot.proto";
+
+message BargainStartNotify {
+	enum CmdId {
+		option allow_alias = true;
+		NONE = 0;
+		ENET_CHANNEL_ID = 0;
+		ENET_IS_RELIABLE = 1;
+		CMD_ID = 423;
+	}
+
+	uint32 bargain_id = 1;
+	BargainSnapshot snapshot = 2;
+}

@@ -1,0 +1,7 @@
+syntax = "proto3";
+option csharp_namespace = "YSFreedom.Common.Protocol";
+
+
+message GalleryFlowerStartParam {
+	uint32 target_score = 1;
+}

@@ -3,9 +3,14 @@ package main
 import (
 	"flag"
 	"fmt"
+	"io"
 	"io/ioutil"
+	"log"
 	"net"
 	"net/http"
+	"time"
+
+	"github.com/xtaci/kcp-go"
 )
 
 var addr string
@@ -13,6 +18,13 @@ var replayport int
 
 func IndexHandler(w http.ResponseWriter, r *http.Request) {
 	fmt.Println(r.RequestURI)
+	//if r.URL.Path == "query_cur_region" {
+	//	query_cur_region(w, r)
+	//}
+	//if r.URL.Path == "query_region_list" {
+	//	query_region_list(w, r)
+	//}
+
 	mulu := "./http" + r.URL.Path
 	//r.RequestURI
 
@@ -32,7 +44,75 @@ func checkError(err error) bool {
 	}
 	return false
 }
-func udp(address string) {
+func handleEcho(conn *kcp.UDPSession) {
+	buf := make([]byte, 4096)
+	for {
+		n, err := conn.Read(buf)
+		if err != nil {
+			log.Println(err)
+			return
+		}
+		fmt.Println(buf)
+		n, err = conn.Write(buf[:n])
+		if err != nil {
+			log.Println(err)
+			return
+		}
+	}
+}
+
+func client(test string) {
+	//key := pbkdf2.Key([]byte("demo pass"), []byte("demo salt"), 1024, 32, sha1.New)
+	//block, _ := kcp.NewAESBlockCrypt(key)
+
+	// wait for server to become ready
+	time.Sleep(time.Second)
+
+	// dial to the echo server
+	if sess, err := kcp.DialWithOptions(test, nil, 0, 0); err == nil {
+		for {
+			data := time.Now().String()
+			buf := make([]byte, len(data))
+			log.Println("sent:", data)
+			if _, err := sess.Write([]byte(data)); err == nil {
+				// read back the data
+				if _, err := io.ReadFull(sess, buf); err == nil {
+					log.Println("recv:", string(buf))
+				} else {
+					log.Fatal(err)
+				}
+			} else {
+				log.Fatal(err)
+			}
+			time.Sleep(time.Second)
+		}
+	} else {
+		log.Fatal(err)
+	}
+}
+
+func udp(test string) {
+	//key := pbkdf2.Key([]byte("demo pass"), []byte("demo salt"), 1024, 32, sha1.New)
+	//block, _ := kcp.NewAESBlockCrypt(key)
+	fmt.Println(test)
+	if listener, err := kcp.ListenWithOptions(test, nil, 0, 0); err == nil {
+		// spin-up the client
+		//go client(test)
+		for {
+			s, err := listener.AcceptKCP()
+			if err != nil {
+				log.Fatal(err)
+			}
+			fmt.Println(s)
+			go handleEcho(s)
+		}
+	} else {
+		log.Fatal(err)
+	}
+
+}
+
+func udpc(address string) {
 
 	//fmt.Print("OK")
 	udpAddr, _ := net.ResolveUDPAddr("udp", address)
@@ -97,9 +177,10 @@ func httpreq(addr string) {
 }
 func main() {
 	addr := "0.0.0.0:22102"
-	http := "0.0.0.0:22220"
+	http := "0.0.0.0:22223"
 	//serverdd = "127.0.0.1:9997"
 	//pss = "000"
+	//test()
 	//fmt.Println(os.Args)
 	flag.StringVar(&addr, "l", "0.0.0.0:22222", "Listen")
 	flag.Parse()

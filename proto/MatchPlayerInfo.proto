@@ -1,0 +1,9 @@
+syntax = "proto3";
+option csharp_namespace = "YSFreedom.Common.Protocol";
+
+import "OnlinePlayerInfo.proto";
+
+message MatchPlayerInfo {
+	OnlinePlayerInfo player_info = 1;
+	bool is_agreed = 2;
+}

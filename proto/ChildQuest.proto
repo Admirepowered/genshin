@@ -1,0 +1,9 @@
+syntax = "proto3";
+option csharp_namespace = "YSFreedom.Common.Protocol";
+
+
+message ChildQuest {
+	uint32 quest_id = 1;
+	uint32 state = 2;
+	uint32 quest_config_id = 3;
+}

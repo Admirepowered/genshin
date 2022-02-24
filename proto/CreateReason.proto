@@ -1,0 +1,8 @@
+syntax = "proto3";
+option csharp_namespace = "YSFreedom.Common.Protocol";
+
+enum CreateReason {
+	CREATE_NONE = 0;
+	CREATE_QUEST = 1;
+	CREATE_ENERGY = 2;
+}

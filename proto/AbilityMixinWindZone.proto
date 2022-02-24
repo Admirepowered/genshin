@@ -1,0 +1,8 @@
+syntax = "proto3";
+option csharp_namespace = "YSFreedom.Common.Protocol";
+
+
+message AbilityMixinWindZone {
+	repeated uint32 entity_ids = 1;
+	repeated uint32 zone_id_list = 2;
+}

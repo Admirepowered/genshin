@@ -1,0 +1,19 @@
+syntax = "proto3";
+option csharp_namespace = "YSFreedom.Common.Protocol";
+
+
+message ActivityCondStateChangeNotify {
+	enum CmdId {
+		option allow_alias = true;
+		NONE = 0;
+		ENET_CHANNEL_ID = 0;
+		ENET_IS_RELIABLE = 1;
+		CMD_ID = 2035;
+	}
+
+	uint32 schedule_id = 1;
+	uint32 activity_id = 2;
+	repeated uint32 meet_cond_list = 3;
+	repeated uint32 expire_cond_list = 4;
+	repeated uint32 activated_sale_id_list = 5;
+}

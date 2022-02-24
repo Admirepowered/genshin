@@ -1,0 +1,11 @@
+syntax = "proto3";
+option csharp_namespace = "YSFreedom.Common.Protocol";
+
+import "Vector.proto";
+
+message HomeFurnitureData {
+	uint32 furniture_id = 1;
+	Vector spawn_pos = 3;
+	Vector spawn_rot = 4;
+	int32 parent_furniture_index = 7;
+}

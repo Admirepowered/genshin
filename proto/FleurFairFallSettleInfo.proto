@@ -1,0 +1,9 @@
+syntax = "proto3";
+option csharp_namespace = "YSFreedom.Common.Protocol";
+
+import "FallSettleInfo.proto";
+
+message FleurFairFallSettleInfo {
+	FallSettleInfo settle_info = 1;
+	bool is_new_record = 2;
+}

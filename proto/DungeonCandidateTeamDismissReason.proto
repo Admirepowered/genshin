@@ -1,0 +1,7 @@
+syntax = "proto3";
+option csharp_namespace = "YSFreedom.Common.Protocol";
+
+enum DungeonCandidateTeamDismissReason {
+	DUNGEON_CANDIDATE_TPDR_NORMAL = 0;
+	DUNGEON_CANDIDATE_TPDR_DIE = 1;
+}

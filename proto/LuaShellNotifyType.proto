@@ -1,0 +1,7 @@
+syntax = "proto3";
+option csharp_namespace = "YSFreedom.Common.Protocol";
+
+enum LuaShellNotifyType {
+	LUASHELL_NOTIFY = 0;
+	LUASHELL_HIDE = 1;
+}

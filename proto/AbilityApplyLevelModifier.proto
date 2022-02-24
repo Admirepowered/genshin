@@ -1,0 +1,7 @@
+syntax = "proto3";
+option csharp_namespace = "YSFreedom.Common.Protocol";
+
+
+message AbilityApplyLevelModifier {
+	uint32 apply_entity_id = 1;
+}

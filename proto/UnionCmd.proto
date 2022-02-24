@@ -1,0 +1,8 @@
+syntax = "proto3";
+option csharp_namespace = "YSFreedom.Common.Protocol";
+
+
+message UnionCmd {
+	uint32 message_id = 1;
+	bytes body = 2;
+}

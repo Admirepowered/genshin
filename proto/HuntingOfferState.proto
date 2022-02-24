@@ -1,0 +1,9 @@
+syntax = "proto3";
+option csharp_namespace = "YSFreedom.Common.Protocol";
+
+enum HuntingOfferState {
+	NONE = 0;
+	STARTED = 1;
+	UNSTARTED = 2;
+	SUCC = 3;
+}

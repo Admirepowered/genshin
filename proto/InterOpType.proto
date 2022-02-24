@@ -1,0 +1,7 @@
+syntax = "proto3";
+option csharp_namespace = "YSFreedom.Common.Protocol";
+
+enum InterOpType {
+	INTER_OP_FINISH = 0;
+	INTER_OP_START = 1;
+}

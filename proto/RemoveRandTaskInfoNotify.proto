@@ -1,0 +1,24 @@
+syntax = "proto3";
+option csharp_namespace = "YSFreedom.Common.Protocol";
+
+
+message RemoveRandTaskInfoNotify {
+	enum CmdId {
+		option allow_alias = true;
+		NONE = 0;
+		ENET_CHANNEL_ID = 0;
+		ENET_IS_RELIABLE = 1;
+		CMD_ID = 151;
+	}
+
+	enum FinishReason {
+		DEFAULT = 0;
+		CLEAR = 1;
+		DISTANCE = 2;
+		FINISH = 3;
+	}
+
+	uint32 rand_task_id = 1;
+	bool is_succ = 2;
+	FinishReason reason = 3;
+}

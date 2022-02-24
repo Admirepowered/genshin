@@ -1,0 +1,13 @@
+syntax = "proto3";
+option csharp_namespace = "YSFreedom.Common.Protocol";
+
+import "Vector.proto";
+
+message TreasureMapRegionInfo {
+	uint32 region_id = 1;
+	uint32 start_time = 3;
+	Vector region_center_pos = 4;
+	uint32 region_radius = 5;
+	uint32 current_progress = 6;
+	uint32 goal_points = 7;
+}

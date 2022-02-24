@@ -1,0 +1,10 @@
+syntax = "proto3";
+option csharp_namespace = "YSFreedom.Common.Protocol";
+
+import "FriendEnterHomeOption.proto";
+
+message PlayerHomeCompInfo {
+	FriendEnterHomeOption friend_enter_home_option = 1;
+	repeated uint32 unlocked_module_id_list = 2;
+	repeated uint32 levelup_reward_got_level_list = 3;
+}

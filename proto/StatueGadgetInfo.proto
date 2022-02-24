@@ -1,0 +1,7 @@
+syntax = "proto3";
+option csharp_namespace = "YSFreedom.Common.Protocol";
+
+
+message StatueGadgetInfo {
+	repeated uint32 opened_statue_uid_list = 1;
+}

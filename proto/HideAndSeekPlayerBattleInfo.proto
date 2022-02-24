@@ -1,0 +1,9 @@
+syntax = "proto3";
+option csharp_namespace = "YSFreedom.Common.Protocol";
+
+
+message HideAndSeekPlayerBattleInfo {
+	uint32 avatar_id = 1;
+	repeated uint32 skill_list = 2;
+	bool is_ready = 3;
+}

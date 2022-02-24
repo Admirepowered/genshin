@@ -1,0 +1,9 @@
+syntax = "proto3";
+option csharp_namespace = "YSFreedom.Common.Protocol";
+
+import "DungeonEntryBlockReason.proto";
+
+message DungeonEntryCond {
+	DungeonEntryBlockReason cond_reason = 1;
+	uint32 param1 = 2;
+}

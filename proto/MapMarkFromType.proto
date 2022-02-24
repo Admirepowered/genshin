@@ -1,0 +1,7 @@
+syntax = "proto3";
+
+enum MapMarkFromType {
+	MapMarkFromType_NOE = 0;
+	MapMarkFromType_MONSTER = 1;
+	MapMarkFromType_QUEST = 2;
+}

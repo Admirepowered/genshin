@@ -1,0 +1,12 @@
+syntax = "proto3";
+option csharp_namespace = "YSFreedom.Common.Protocol";
+
+import "ChannellerSlabBuffSchemeInfo.proto";
+import "ChannellerSlabAssistInfo.proto";
+
+message ChannellerSlabBuffInfo {
+	repeated uint32 buff_id_list = 1;
+	ChannellerSlabBuffSchemeInfo single_buff_scheme_info = 2;
+	ChannellerSlabBuffSchemeInfo mp_buff_scheme_info = 3;
+	repeated ChannellerSlabAssistInfo assist_info_list = 4;
+}

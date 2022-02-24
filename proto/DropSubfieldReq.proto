@@ -1,0 +1,20 @@
+syntax = "proto3";
+option csharp_namespace = "YSFreedom.Common.Protocol";
+
+import "DropSubfieldType.proto";
+
+message DropSubfieldReq {
+	enum CmdId {
+		option allow_alias = true;
+		ENET_CHANNEL_ID = 0;
+		NONE = 0;
+		ENET_IS_RELIABLE = 1;
+		IS_ALLOW_CLIENT = 1;
+		CMD_ID = 251;
+	}
+
+	DropSubfieldType drop_type = 1;
+	uint32 drop_param = 2;
+	uint32 entity_id = 3;
+	string subfield_name = 4;
+}

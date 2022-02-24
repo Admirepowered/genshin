@@ -1,0 +1,9 @@
+syntax = "proto3";
+option csharp_namespace = "YSFreedom.Common.Protocol";
+
+import "AttackResult.proto";
+
+message EvtBeingHitInfo {
+	uint32 peer_id = 1;
+	AttackResult attack_result = 2;
+}

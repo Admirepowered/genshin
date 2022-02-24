@@ -1,0 +1,9 @@
+syntax = "proto3";
+option csharp_namespace = "YSFreedom.Common.Protocol";
+
+
+message QuestVarOp {
+	uint32 index = 1;
+	int32 value = 2;
+	bool is_add = 3;
+}

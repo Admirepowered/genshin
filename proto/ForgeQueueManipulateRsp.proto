@@ -1,0 +1,21 @@
+syntax = "proto3";
+option csharp_namespace = "YSFreedom.Common.Protocol";
+
+import "ForgeQueueManipulateType.proto";
+import "ItemParam.proto";
+
+message ForgeQueueManipulateRsp {
+	enum CmdId {
+		option allow_alias = true;
+		NONE = 0;
+		ENET_CHANNEL_ID = 0;
+		ENET_IS_RELIABLE = 1;
+		CMD_ID = 642;
+	}
+
+	int32 retcode = 1;
+	ForgeQueueManipulateType manipulate_type = 2;
+	repeated ItemParam output_item_list = 3;
+	repeated ItemParam return_item_list = 4;
+	repeated ItemParam extra_output_item_list = 5;
+}
